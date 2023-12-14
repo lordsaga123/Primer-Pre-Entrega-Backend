@@ -1,0 +1,11 @@
+[
+  {
+    "id": 2,
+    "title": "Aceite",
+    "description": "Comida",
+    "price": 150,
+    "img": "Sin imagen",
+    "code": "abc124",
+    "stock": 250
+  }
+]
