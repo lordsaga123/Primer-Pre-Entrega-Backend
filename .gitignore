@@ -1,2 +1,3 @@
-/node_modules
-/copiadecarrito.json    
+/node_modules;
+/src/models/copiadecarrito.json 
+

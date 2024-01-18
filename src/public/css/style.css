@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 1s ease;
+    background-color: #c9ffd1;
+    animation: changeColor 20s infinite; /* 20 segundos de duración, repetir infinitamente */
+}
+
+/* Cambia este estilo para ajustar los colores pasteles */
+@keyframes changeColor {
+    0% {
+        background-color: #c9ffd1; /* Verde claro */
+    }
+    25% {
+        background-color: #a5ffd6; /* Verde azulado claro */
+    }
+    50% {
+        background-color: #a1d9ff; /* Azul claro */
+    }
+    75% {
+        background-color: #bdd9ff; /* Azul pastel */
+    }
+    100% {
+        background-color: #c9ffd1; /* Vuelve al verde claro */
+    }
+}
+
+
+
+h1 {
+    text-align: center;
+}
+
+.contenedorProductos{
+    padding: 20px;
+    margin: 20px;
+}
+.contenedorCards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid #28ee56;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    min-width: 200px;
+    max-width: 300px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.formCard {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+  .formCard input,
+  .formCard select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .formCard select {
+    cursor: pointer;
+  }
+  
+  .formCard button {
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .formCard button:hover {
+    background-color: #45a049;
+  }
+  
+  .tituloFormulario {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }

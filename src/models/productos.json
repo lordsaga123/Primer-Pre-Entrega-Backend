@@ -6,7 +6,10 @@
     "price": 150,
     "img": "Sin imagen",
     "code": "abc123",
-    "stock": 250
+    "stock": 250,
+    "category": "Almacen",
+    "status": true,
+    "thumbnails": []
   },
   {
     "id": 2,
@@ -15,7 +18,10 @@
     "price": 300,
     "img": "Sin imagen",
     "code": "abc124",
-    "stock": 210
+    "stock": 210,
+    "category": "Almacen",
+    "status": true,
+    "thumbnails": []
   },
   {
     "id": 3,
@@ -24,7 +30,10 @@
     "price": 250,
     "img": "Sin imagen",
     "code": "abc125",
-    "stock": 250
+    "stock": 250,
+    "category": "Almacen",
+    "status": true,
+    "thumbnails": []
   },
   {
     "id": 4,
@@ -33,7 +42,10 @@
     "price": 110,
     "img": "Sin imagen",
     "code": "abc126",
-    "stock": 250
+    "stock": 250,
+    "category": "Almacen",
+    "status": true,
+    "thumbnails": []
   },
   {
     "id": 5,
@@ -42,7 +54,10 @@
     "price": 60,
     "img": "Sin imagen",
     "code": "abc127",
-    "stock": 250
+    "stock": 250,
+    "category": "Almacen",
+    "status": true,
+    "thumbnails": []
   },
   {
     "id": 6,
@@ -51,7 +66,10 @@
     "price": 150,
     "img": "Sin imagen",
     "code": "abc128",
-    "stock": 250
+    "stock": 250,
+    "category": "Almacen",
+    "status": true,
+    "thumbnails": []
   },
   {
     "id": 7,
@@ -60,7 +78,10 @@
     "price": 650,
     "img": "Sin imagen",
     "code": "abc129",
-    "stock": 250
+    "stock": 250,
+    "category": "Almacen",
+    "status": true,
+    "thumbnails": []
   },
   {
     "id": 8,
@@ -69,7 +90,10 @@
     "price": 450,
     "img": "Sin imagen",
     "code": "abc1210",
-    "stock": 250
+    "stock": 250,
+    "category": "Almacen",
+    "status": true,
+    "thumbnails": []
   },
   {
     "id": 9,
@@ -78,7 +102,10 @@
     "price": 250,
     "img": "Sin imagen",
     "code": "abc1211",
-    "stock": 250
+    "stock": 250,
+    "category": "Almacen",
+    "status": true,
+    "thumbnails": []
   },
   {
     "id": 10,
@@ -87,6 +114,9 @@
     "price": 150,
     "img": "Sin imagen",
     "code": "abc1212",
-    "stock": 250
+    "stock": 250,
+    "category": "Almacen",
+    "status": true,
+    "thumbnails": []
   }
 ]

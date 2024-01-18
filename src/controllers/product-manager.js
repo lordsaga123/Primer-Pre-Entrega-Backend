@@ -9,7 +9,46 @@ class ProductManager{
         this.path = path;
     }
 
-    async addProduct(nuevoObjeto) {
+    async addProduct({ title, description, price, img, code, stock, category, thumbnails }) {
+        try {
+          const arrayProductos = await this.leerArchivo();
+    
+          if (!title || !description || !price || !code || !stock || !category) {
+            console.log("Todos los campos son obligatorios");
+            return;
+          }
+    
+          if (arrayProductos.some(item => item.code === code)) {
+            console.log("El código debe ser único");
+            return;
+          }
+    
+          const newProduct = {
+            title,
+            description,
+            price,
+            img,
+            code,
+            stock,
+            category,
+            status: true,
+            thumbnails: thumbnails || []
+          };
+    
+          if (arrayProductos.length > 0) {
+            ProductManager.ultId = arrayProductos.reduce((maxId, product) => Math.max(maxId, product.id), 0);
+          }
+    
+          newProduct.id = ++ProductManager.ultId; 
+    
+          arrayProductos.push(newProduct);
+          await this.guardarArchivo(arrayProductos);
+        } catch (error) {
+          console.log("Error al agregar producto", error);
+          throw error; 
+        }
+      }
+    /*async addProduct(nuevoObjeto) {
         let { title, description, price, img, code, stock, status, category } = nuevoObjeto;
 
         if (!title || !description || !price || !img || !code || !stock || !status || !category) {
@@ -30,15 +69,16 @@ class ProductManager{
             img,
             code,
             stock,
-            status,
-            category
+            status: true,
+            category,
+            thumbnails: thumbnails || []
         };
 
         this.products.push(newProduct);
 
         // Guardar la lista actualizada en el archivo
         await this.guardarArchivo(this.products);
-    }
+    }*/
 
     //Obtener los productos
     getProducts(){
@@ -83,13 +123,21 @@ class ProductManager{
     //Método Guardar
     async guardarArchivo(arrayProductos) {
         try {
+          await fs.writeFile(this.path, JSON.stringify(arrayProductos, null, 2));
+        } catch (error) {
+          console.log("Error al guardar el archivo", error);
+          throw error;
+        }
+      }
+    /*async guardarArchivo(arrayProductos) {
+        try {
             const existingProducts = await this.leerArchivo();
             existingProducts.push(...arrayProductos);
             await fs.writeFile(this.path, JSON.stringify(existingProducts, null, 2));
         } catch (error) {
             console.log("Error al guardar el Archivo", error);
         }
-    }
+    }*/
     
 
     // Método Actualizar
